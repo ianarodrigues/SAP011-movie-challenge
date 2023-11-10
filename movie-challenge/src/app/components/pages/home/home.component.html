@@ -1,0 +1,12 @@
+<div>
+  <app-top-content></app-top-content>
+</div>
+
+<div>
+  <app-movie-container [movies]="movies"></app-movie-container>
+</div>
+
+<div>
+  <app-pagination [currentPage]="currentPage" [totalPages]="totalPages" (pageChanged)="onPageChanged($event)"></app-pagination>
+</div>
+
