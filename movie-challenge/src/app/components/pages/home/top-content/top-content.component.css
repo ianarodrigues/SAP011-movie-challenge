@@ -1,0 +1,27 @@
+#filter-and-order {
+  background-color: #161616;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  
+}
+
+#filter, #order {
+  width: 140px;
+  height: 38px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: #367D7C;
+  padding: 0px 15px 0px;
+  border: none;
+  margin-left: 3rem;
+
+}
+
+#filter:hover, #order:hover{
+  background-color: #317271;
+
+}
+
