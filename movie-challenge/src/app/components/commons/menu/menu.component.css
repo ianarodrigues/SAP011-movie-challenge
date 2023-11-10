@@ -1,0 +1,24 @@
+.navbar-brand {
+  margin-left: 2rem;
+  font-size: 30px;
+  color: white;
+}
+
+.search {
+  margin-right: 2rem;
+}
+
+.navbar {
+  background-color: #1B1A1A;
+}
+
+.form-control {
+  background-color: #2D2D2D;
+  border: none;
+  border-radius: 30px;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: white;
+}
