@@ -1,0 +1,13 @@
+<div id="movie-container" routerLink="details">
+  <div class="card" *ngFor="let movie of movies">
+    <img
+      src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}"
+      class="card-img-top"
+      alt="{{ movie.title }}"
+      />
+    <div class="card-body">
+      <p>{{ movie.title }}</p>
+      <p>{{ movie.release_date | date : "yyyy" }}</p>
+    </div>
+  </div>
+</div>
