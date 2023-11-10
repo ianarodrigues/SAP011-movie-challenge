@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #161616 ;
+  border-top: 1px solid #B6B7B9;
+  margin: 0;
+}
+
+
+.page-link {
+  background-color: rgba(68, 68, 68, 0.4);
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.selected-page {
+  background-color: #367D7C; 
+  color: black;
+  font-weight: 500; 
+}
