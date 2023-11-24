@@ -1,13 +1,31 @@
 <div id="filter-and-order">
-<select name="select" id="filter">
-  <option value="filter" selected>Filter by</option>
-  <option value="valor1">option 1</option>
-  <option value="valor2">option 2</option>
+<select name="select" id="filter" [(ngModel)]="selectedGenre" (change)="optionsChange()">
+  <option value="0" default>Filter by Genre</option>
+  <option class="genre-options" *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
 </select>
 
-<select name="select" id="order">
-  <option value="order" selected>Order by</option>
-  <option class="option" value="valor1">option 1</option>
-  <option value="valor2">option 2</option>
+<select name="select" id="order" [(ngModel)]="selectedOrder" (change)="optionsChange()">
+  <option class="order-options" *ngFor="let order of orderByList" [value]="order.order">{{ order.text }}</option>
 </select>
+
+<div id="container-form">
+<form id="form-search">
+  <input id="search" name="search" [(ngModel)]="keyWord" type="search" placeholder="Search" aria-label="Search">
+  <img 
+        src="../../../../../assets/search-icon.png"
+        id="search-icon" alt="Search Icon"
+        (click)="optionsChange()"
+      /> 
+  <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+</form>
 </div>
+
+</div>
+<!-- 
+<div style="color:white">
+  {{ selectedGenre }} - {{ selectedOrder }}
+</div>
+</div> -->
+
+
+<!-- (change)="pickGenre($event) -->

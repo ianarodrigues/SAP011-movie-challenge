@@ -1,9 +1,10 @@
 <div>
-  <app-top-content></app-top-content>
+  <app-top-content [genres]="genres" [orderBy]="orderBy" (filterChanged)="filterChanged($event)"></app-top-content> 
 </div>
+<!-- sempre que é um eventemitter vem com parenteses  -->
 
 <div>
-  <app-movie-container [movies]="movies"></app-movie-container>
+  <app-movie-container [movies]="movies" [genre]="selectedGenre" [orderBy]="selectedOrder" [pageNumber]="currentPage.toString()"></app-movie-container>
 </div>
 
 <div>

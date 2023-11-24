@@ -1,10 +1,16 @@
-<div id="movie-container" routerLink="details">
+<div id="movie-container">
   <div class="card" *ngFor="let movie of movies">
+    <a [routerLink]="['/movie-details/', movie.id ]" [queryParams]="{ order:orderBy, genre:genre }">
+      <div *ngIf="movie.poster_path; else noImage">
     <img
       src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}"
       class="card-img-top"
-      alt="{{ movie.title }}"
-      />
+      alt="{{ movie.title }}">
+    </div>
+    <ng-template #noImage>
+        <img class="card-img-top" src="../../../../../assets/poster-not-found.png">
+    </ng-template>
+    </a>
     <div class="card-body">
       <p>{{ movie.title }}</p>
       <p>{{ movie.release_date | date : "yyyy" }}</p>

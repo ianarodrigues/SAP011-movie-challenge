@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { TopContentComponent } from './top-content/top-content.component';
 import { MovieContainerComponent } from './movie-container/movie-container.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PaginationComponent } from './pagination/pagination.component';
   imports: [
     CommonModule,
     HomeRoutingModule, 
+    FormsModule,
   ],
   exports: [
     HomeComponent

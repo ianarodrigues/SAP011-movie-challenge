@@ -1,13 +1,16 @@
 #filter-and-order {
   background-color: #161616;
   height: 120px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.2fr 0.3fr 1fr;
   align-items: center;
-  
+  padding-left: 3rem;
+  padding-right: 3rem;
+
 }
 
 #filter, #order {
-  width: 140px;
+  width: 215px;
   height: 38px;
   border-radius: 30px;
   font-size: 16px;
@@ -16,12 +19,44 @@
   background-color: #367D7C;
   padding: 0px 15px 0px;
   border: none;
-  margin-left: 3rem;
-
+  /* margin-left: 3rem; */
 }
 
 #filter:hover, #order:hover{
   background-color: #317271;
+}
 
+#search-icon{
+  width: 20px;
+  height: 20px;
+}
+
+#container-form {
+  display: flex;
+  justify-content:end;
+}
+#form-search{
+  padding: 0 1rem 0;
+  width: 15rem;
+  
+ 
+}
+
+#form-search, #search {
+  background-color: #2D2D2D;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  font-size: 1rem;
+  font-weight: 400;
+  height: 38px;
+}
+#search::placeholder {
+  color: white;
 }
 
