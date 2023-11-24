@@ -1,0 +1,82 @@
+.details-container {
+  background-color: #161616;
+  /* border: 2px solid red; */
+  max-width: 160vh;
+  padding: 0rem 0 0 3.3rem;
+  border: none;
+
+
+}
+
+.img-fluid {
+  border: 18px solid #2d2d2d;
+  width: auto;
+  height: 25rem;
+  border-radius: 8px;
+
+}
+
+/* .col-md-4{
+  display: flex;
+  justify-content: center;
+} */
+
+.card-body {
+  color: white;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "card-title vote-average"
+    "title-release-year info-release"
+    "genres info-genres"
+    "overview info-overview";
+}
+
+.title-details {
+  background-color: #367d7c;
+  color: white;
+  border-radius: 30px;
+  height: 35px;
+  width: 135px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.card-title {
+  grid-area: card-title;
+  margin-bottom: 30px;
+}
+
+#vote-average {
+  grid-area: vote-average;
+}
+
+#title-release-year {
+  grid-area: title-release-year;
+}
+
+#info-release {
+  grid-area: info-release;
+}
+
+#genres {
+  grid-area: genres;
+}
+
+.info-details {
+ font-size: 16px;
+ text-align: justify;
+}
+
+#info-genres {
+  grid-area: info-genres;
+}
+
+#info-overview {
+  grid-area: info-overview;
+}
+
