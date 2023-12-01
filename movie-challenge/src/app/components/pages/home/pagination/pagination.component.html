@@ -3,24 +3,34 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" (click)="loadPreviousPage()" aria-label="Previous">
+      <a class="page-link cursor" (click)="loadFirstPage()" aria-label="First">
+        First
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link cursor" (click)="loadPreviousPage()" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
     <li class="page-item" *ngIf="currentPage > 1">
-      <a class="page-link" (click)="loadPage(currentPage - 1)" [ngClass]="{'selected-page': isSelectedPage(currentPage - 1)}">{{ currentPage - 1 }}</a>
+      <a class="page-link cursor" (click)="loadPage(currentPage - 1)" [ngClass]="{'selected-page': isSelectedPage(currentPage - 1)}">{{ currentPage - 1 }}</a>
     </li>
     <li class="page-item">
-      <a class="page-link" (click)="loadPage(currentPage)" [ngClass]="{'selected-page': isSelectedPage(currentPage)}">{{ currentPage }}</a>
+      <a class="page-link cursor" (click)="loadPage(currentPage)" [ngClass]="{'selected-page': isSelectedPage(currentPage)}">{{ currentPage }}</a>
     </li>
     <li class="page-item" *ngIf="currentPage < totalPages">
-      <a class="page-link" (click)="loadPage(currentPage + 1)" [ngClass]="{'selected-page': isSelectedPage(currentPage + 1)}">{{ currentPage + 1 }}</a>
+      <a class="page-link cursor" (click)="loadPage(currentPage + 1)" [ngClass]="{'selected-page': isSelectedPage(currentPage + 1)}">{{ currentPage + 1 }}</a>
     </li>
     <li class="page-item">
-      <a class="page-link" (click)="loadNextPage()" aria-label="Next">
+      <a class="page-link"  >...</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link cursor" (click)="loadNextPage()" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">{{ totalPages }}</a></li>
+    <li class="page-item" *ngIf="currentPage < totalPages">
+      <a class="page-link">{{ totalPages }}</a>
+    </li>
   </ul>
 </nav>

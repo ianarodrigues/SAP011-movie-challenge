@@ -1,11 +1,9 @@
 .details-container {
   background-color: #161616;
   /* border: 2px solid red; */
-  max-width: 160vh;
+  max-width: 180vh;
   padding: 0rem 0 0 3.3rem;
   border: none;
-
-
 }
 
 .img-fluid {
@@ -16,10 +14,9 @@
 
 }
 
-/* .col-md-4{
-  display: flex;
-  justify-content: center;
-} */
+.col-md-4{
+  width: 26%;
+}
 
 .card-body {
   color: white;

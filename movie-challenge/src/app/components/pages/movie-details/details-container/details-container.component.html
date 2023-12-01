@@ -17,7 +17,10 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">{{ movie.title }}</h5>
-          <h5 id="vote-average">{{ movie.vote_average }}</h5>
+          <h5 id="vote-average">
+            {{ movie.vote_average | number:'1.1-1'}} / 
+            {{ movie.vote_count | number:'1.0-2'}} votes
+          </h5>
           <p class="title-details" id="title-release-year">Release Year:</p>
           <p class="info-details" id="info-release">
             {{ movie.release_date | date : "yyyy" }}
@@ -28,10 +31,8 @@
           </p>
           <p class="title-details" id="overview">Overview:</p>
           <p class="info-details" id="#info-overview">{{ movie.overview }}</p>
-          <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- style="max-width: 540px" -->

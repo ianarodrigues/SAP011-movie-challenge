@@ -2,18 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 120px;
   background-color: #161616 ;
-  border-top: 1px solid #B6B7B9;
+  border-top: 1px solid #3d3d3e;
   margin: 0;
 }
 
+.page-item, .page-link{
+  height: 45px;
+  width: auto;
+  font-size: 17px;
+}
+
+.cursor {
+  cursor: pointer;
+}
 
 .page-link {
   background-color: rgba(68, 68, 68, 0.4);
   color: white;
   font-weight: 500;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .selected-page {

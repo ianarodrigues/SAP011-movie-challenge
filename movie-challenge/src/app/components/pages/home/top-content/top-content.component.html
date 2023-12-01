@@ -8,24 +8,21 @@
   <option class="order-options" *ngFor="let order of orderByList" [value]="order.order">{{ order.text }}</option>
 </select>
 
-<div id="container-form">
-<form id="form-search">
+<!-- <div id="container-form">
+<form id="form-search"> 
   <input id="search" name="search" [(ngModel)]="keyWord" type="search" placeholder="Search" aria-label="Search">
   <img 
         src="../../../../../assets/search-icon.png"
         id="search-icon" alt="Search Icon"
         (click)="optionsChange()"
       /> 
-  <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-</form>
-</div>
+</form> 
+</div> -->
 
 </div>
+
 <!-- 
 <div style="color:white">
   {{ selectedGenre }} - {{ selectedOrder }}
 </div>
 </div> -->
-
-
-<!-- (change)="pickGenre($event) -->

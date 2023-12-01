@@ -1,6 +1,6 @@
 <div id="movie-container">
   <div class="card" *ngFor="let movie of movies">
-    <a [routerLink]="['/movie-details/', movie.id ]" [queryParams]="{ order:orderBy, genre:genre }">
+    <a [routerLink]="['/movie-details/', movie.id ]" [queryParams]="queryParams">
       <div *ngIf="movie.poster_path; else noImage">
     <img
       src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}"
@@ -12,7 +12,7 @@
     </ng-template>
     </a>
     <div class="card-body">
-      <p>{{ movie.title }}</p>
+      <p id="movie-title">{{ movie.title }}</p>
       <p>{{ movie.release_date | date : "yyyy" }}</p>
     </div>
   </div>
