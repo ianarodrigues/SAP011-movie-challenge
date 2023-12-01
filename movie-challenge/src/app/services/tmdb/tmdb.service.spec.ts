@@ -36,5 +36,4 @@ describe('TmdbService', () => {
     req.flush(dummyResponse);
   });
 
-  // Add more tests for other service methods...
 });

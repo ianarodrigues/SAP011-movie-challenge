@@ -35,9 +35,6 @@ describe('DetailsContainerComponent', () => {
   });
 
   it('should create', () => {
-    // component.ngOnInit();
-    // fixture.detectChanges();
-    console.log(component.movie);
     expect(component).toBeTruthy();
   });
 });

@@ -32,8 +32,6 @@ describe('MovieContainerComponent', () => {
     const movieElements = fixture.debugElement.queryAll(By.css('.card'));
     expect(movieElements.length).toBe(2);
 
-    // Add more assertions based on your component structure and expected movie data
-    // For example:
     expect(movieElements[0].query(By.css('#movie-title')).nativeElement.textContent).toContain('Movie 1');
     expect(movieElements[1].query(By.css('#movie-title')).nativeElement.textContent).toContain('Movie 2');
   });
