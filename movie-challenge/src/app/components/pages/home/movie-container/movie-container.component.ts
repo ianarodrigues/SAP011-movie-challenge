@@ -7,17 +7,20 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class MovieContainerComponent implements OnChanges {
   @Input() movies: any[] = [];
-  @Input() genre: string|undefined = '';
-  @Input() orderBy: string = '';
-  @Input() pageNumber: string = ''; 
-  queryParams: string = '';
+  @Input() genre: string | undefined = '';
+  @Input() orderBy: string | undefined = '';
+  @Input() pageNumber: string | undefined = ''; 
+  queryParams: any = {};
  
   constructor() {
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log({a: this.genre, b: this.orderBy});
     if (this.orderBy || this.genre){
-      this.queryParams = `\?order=${this.orderBy}${this.genre !== undefined ? `&genre=${this.genre}`:``}`
+      this.queryParams = {
+        order: this.orderBy, 
+        genre: this.genre,
+        pageNumber: this.pageNumber
+      } 
     }
   }
 

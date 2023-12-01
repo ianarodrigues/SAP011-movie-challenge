@@ -38,4 +38,11 @@ export class PaginationComponent {
   isSelectedPage(pageNumber: number): boolean {
     return pageNumber === this.currentPage;
   }
+
+  loadFirstPage() {
+    if (this.currentPage !== 1) {
+      this.currentPage = 1;
+      this.pageChanged.emit(this.currentPage);
+    }
+  }
 }
